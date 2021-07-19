@@ -1,11 +1,12 @@
 {
-  "name": "notevil",
+  "name": "forgood",
   "version": "1.3.3",
   "description": "Evalulate javascript like the built-in eval() method but safely",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape-es test/*.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/mmckegg/notevil"
@@ -27,6 +28,6 @@
     "hoister": "~0.0"
   },
   "devDependencies": {
-    "tape": "^4.11.0"
+    "tape-es": "^1.2.15"
   }
 }

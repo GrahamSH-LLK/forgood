@@ -1,5 +1,5 @@
-var safeEval = require('../')
-var test = require('tape')
+import safeEval from '../index.js'
+import test from 'tape'
 
 test('attempt override prototype method', function(t){
   var original = Array.prototype.map

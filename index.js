@@ -1,13 +1,14 @@
-var parse = require('esprima').parse
-var hoist = require('hoister')
+import { parse } from 'esprima'
+import hoist from 'hoister'
 
-var InfiniteChecker = require('./lib/infinite-checker')
-var Primitives = require('./lib/primitives')
+import InfiniteChecker from './lib/infinite-checker.js'
+import Primitives from './lib/primitives.js'
 
-module.exports = safeEval
-module.exports.eval = safeEval
-module.exports.FunctionFactory = FunctionFactory
-module.exports.Function = FunctionFactory()
+export default safeEval
+//export const eval = safeEval
+const _FunctionFactory = FunctionFactory
+export { _FunctionFactory as FunctionFactory }
+export const Function = FunctionFactory()
 
 var maxIterations = 1000000
 

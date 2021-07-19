@@ -1,5 +1,5 @@
-var run = require('../')
-var test = require('tape')
+import run from '../index.js'
+import test from 'tape'
 
 test('number math', function(t){
   t.equal(run('1+2+3+4/2*100'), 1+2+3+4/2*100)
